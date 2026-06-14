@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Chaser工作室</title>
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <!-- Logo区域 -->
+        <a href="index.html" class="navbar-logo">
+            <img src="img/logo.png" alt="Dream Chaser Logo" class="logo-image">
+            <span class="logo-text">Dream Chaser</span>
+        </a>
+
+        <!-- 导航菜单 -->
+        <div class="navbar-menu">
+            <div class="menu-item">
+                <a href="index.html" class="no-arrow">首页</a>
+            </div>
+            <span class="separator">|</span>
+
+            <!-- 关于我们 - 二级下拉 -->
+            <div class="menu-item">
+                <a href="introduction.html">关于我们</a>
+                <div class="dropdown">
+                    <a href="introduction.html#intro">工作室简介</a>
+                    <a href="introduction.html#history">发展历程</a>
+                    <a href="introduction.html#advantage">工作室优势</a>
+                </div>
+            </div>
+
+            <span class="separator">|</span>
+
+            <!-- 技术项目 - 二级下拉 -->
+            <div class="menu-item">
+                <a href="project.html">技术项目</a>
+                <div class="dropdown">
+                    <a href="project.html#core">核心项目</a>
+                    <a href="project.html#personal">个人项目</a>
+                </div>
+            </div>
+
+            <span class="separator">|</span>
+
+            <!-- 商店 - 二级下拉 -->
+            <div class="menu-item">
+                <a href="shop.html">商店</a>
+                <div class="dropdown">
+                    <a href="shop.html#system">训练系统</a>
+                    <a href="shop.html#part">安装部件</a>
+                    <a href="shop.html#replace">替换零件</a>
+                    <a href="shop.html#accessory">配件</a>
+                    <a href="shop.html#dealer">经销商</a>
+                    <a href="shop.html#review">评价</a>
+                </div>
+            </div>
+
+            <span class="separator">|</span>
+
+            <!-- 团队成员 - 二级下拉 -->
+            <div class="menu-item">
+                <a href="team.html">团队成员</a>
+                <div class="dropdown">
+                    <a href="team.html#teacher">指导老师信息</a>
+                    <a href="team.html#member">成员信息</a>
+                </div>
+            </div>
+
+            <span class="separator">|</span>
+
+            <!-- 新闻动态 - 二级下拉 -->
+            <div class="menu-item">
+                <a href="news.html">新闻动态</a>
+                <div class="dropdown">
+                    <a href="news.html#award">竞赛获奖</a>
+                    <a href="news.html#activity">工作室活动</a>
+                    <a href="news.html#share">技术分享</a>
+                </div>
+            </div>
+            <span class="separator">|</span>
+
+            <!-- 联系我们 - 二级下拉 -->
+            <div class="menu-item">
+                <a href="contact.html">联系我们</a>
+                <div class="dropdown">
+                    <a href="contact.html#form">在线留言表单</a>
+                    <a href="contact.html#phone">电话/微信/邮箱</a>
+                    <a href="contact.html#location">工作室位置</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 购物车按钮 -->
+        <div class="cart-button" id="cartButton">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </nav>
+
+    <!-- 购物车弹窗 -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>🛒 购物车</h3>
+                <span class="close-cart" id="closeCart">×</span>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">购物车是空的</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>合计：</span>
+                    <span class="total-price" id="totalPrice">¥0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">结算</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主内容区域 -->
+    <div class="container">
+        <!-- 商店横幅 -->
+        <section class="shop-banner">
+            <h1>🏪 Dream Chaser 商店</h1>
+            <p>专业射击训练设备与配件</p>
+        </section>
+
+        <!-- 训练系统 -->
+        <section class="section hexin">
+            <div class="section-header">
+                <h2 id="system">🎯 训练系统</h2>
+            </div>
+            <div class="section-content hexin-w">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="img/shangpin1.jpeg" alt="射击训练系统1.0">
+                        <h3>射击训练系统1.0</h3>
+                        <p>基础版射击训练辅助系统，适合入门用户</p>
+                        <div class="product-price">¥2,999</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="1">-</button>
+                            <input type="number" class="qty-input" data-id="1" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="1">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="1" data-name="射击训练系统1.0" data-price="2999">加入购物车</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/shangpin2.png" alt="射击训练系统2.0">
+                        <h3>射击训练系统2.0</h3>
+                        <p>进阶版，支持多种射击模式和数据分析</p>
+                        <div class="product-price">¥4,999</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="2">-</button>
+                            <input type="number" class="qty-input" data-id="2" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="2">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="2" data-name="射击训练系统2.0" data-price="4999">加入购物车</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/shangpin3.jpg" alt="射击训练系统3.0">
+                        <h3>射击训练系统3.0</h3>
+                        <p>旗舰版，AI智能分析，实时反馈</p>
+                        <div class="product-price">¥7,999</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="3">-</button>
+                            <input type="number" class="qty-input" data-id="3" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="3">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="3" data-name="射击训练系统3.0" data-price="7999">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 安装部件 -->
+        <section class="section hexin">
+            <div class="section-header">
+                <h2 id="part">🔧 安装部件</h2>
+            </div>
+            <div class="section-content hexin-w">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="img/bujian1.jpg" alt="支架底座">
+                        <h3>支架底座</h3>
+                        <p>高强度铝合金材质，稳固支撑</p>
+                        <div class="product-price">¥399</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="4">-</button>
+                            <input type="number" class="qty-input" data-id="4" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="4">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="4" data-name="支架底座" data-price="399">加入购物车</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/bujian2.jpg" alt="连接线束">
+                        <h3>连接线束</h3>
+                        <p>高质量连接线，抗干扰设计</p>
+                        <div class="product-price">¥199</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="5">-</button>
+                            <input type="number" class="qty-input" data-id="5" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="5">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="5" data-name="连接线束" data-price="199">加入购物车</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/bujian3.jpg" alt="电源适配器">
+                        <h3>电源适配器</h3>
+                        <p>宽电压输入，稳定可靠</p>
+                        <div class="product-price">¥159</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="6">-</button>
+                            <input type="number" class="qty-input" data-id="6" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="6">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="6" data-name="电源适配器" data-price="159">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 替换零件 -->
+        <section class="section hexin">
+            <div class="section-header">
+                <h2 id="replace">🔩 替换零件</h2>
+            </div>
+            <div class="section-content hexin-w">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="img/lingjian1.jpg" alt="传感器模块">
+                        <h3>传感器模块</h3>
+                        <p>高精度感应元件</p>
+                        <div class="product-price">¥299</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="7">-</button>
+                            <input type="number" class="qty-input" data-id="7" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="7">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="7" data-name="传感器模块" data-price="299">加入购物车</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/lingjian2.jpg" alt="镜头组件">
+                        <h3>镜头组件</h3>
+                        <p>高清光学镜头</p>
+                        <div class="product-price">¥459</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="8">-</button>
+                            <input type="number" class="qty-input" data-id="8" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="8">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="8" data-name="镜头组件" data-price="459">加入购物车</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/lingjian3.jpg" alt="控制主板">
+                        <h3>控制主板</h3>
+                        <p>核心控制单元</p>
+                        <div class="product-price">¥599</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="9">-</button>
+                            <input type="number" class="qty-input" data-id="9" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="9">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="9" data-name="控制主板" data-price="599">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 配件 -->
+        <section class="section hexin">
+            <div class="section-header">
+                <h2 id="accessory">🎒 配件</h2>
+            </div>
+            <div class="section-content hexin-w">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="img/peijian1.jpg" alt="便携收纳箱">
+                        <h3>便携收纳箱</h3>
+                        <p>防水防震，便于携带</p>
+                        <div class="product-price">¥359</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="10">-</button>
+                            <input type="number" class="qty-input" data-id="10" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="10">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="10" data-name="便携收纳箱" data-price="359">加入购物车</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/peijian2.jpg" alt="清洁套装">
+                        <h3>清洁套装</h3>
+                        <p>专业清洁工具套装</p>
+                        <div class="product-price">¥89</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="11">-</button>
+                            <input type="number" class="qty-input" data-id="11" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="11">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="11" data-name="清洁套装" data-price="89">加入购物车</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/peijian3.jpg" alt="备用电池">
+                        <h3>备用电池</h3>
+                        <p>大容量锂电池</p>
+                        <div class="product-price">¥199</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" data-id="12">-</button>
+                            <input type="number" class="qty-input" data-id="12" value="0" min="0" max="99">
+                            <button class="qty-btn plus" data-id="12">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="12" data-name="备用电池" data-price="199">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 经销商 -->
+        <section class="section hexin">
+            <div class="section-header">
+                <h2 id="dealer">🏬 经销商</h2>
+            </div>
+            <div class="section-content hexin-w">
+                <div class="dealer-card">
+                    <h3>授权经销商查询</h3>
+                    <p>我们在全国各地设有授权经销商，为您提供本地化服务支持。</p>
+                    <div class="dealer-info">
+                        <div class="dealer-item">
+                            <h4>📍 湖南总代</h4>
+                            <p>地址：长沙市芙蓉区科技园区A栋</p>
+                            <p>电话：400-888-0001</p>
+                        </div>
+                        <div class="dealer-item">
+                            <h4>📍 广东代理</h4>
+                            <p>地址：深圳市南山区科技园</p>
+                            <p>电话：400-888-0002</p>
+                        </div>
+                        <div class="dealer-item">
+                            <h4>📍 北京代理</h4>
+                            <p>地址：北京市海淀区中关村</p>
+                            <p>电话：400-888-0003</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 用户评价 -->
+        <section class="section hexin">
+            <div class="section-header">
+                <h2 id="review">⭐ 用户评价</h2>
+            </div>
+            <div class="section-content hexin-w">
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <h4>非常专业的设备</h4>
+                        <p>购买了射击训练系统2.0，质量非常好，客服也很耐心，强烈推荐！</p>
+                        <div class="review-author">—— 张先生</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <h4>物超所值</h4>
+                        <p>训练效果明显提升，性价比很高，已经推荐给队友了。</p>
+                        <div class="review-author">—— 李女士</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <h4>服务周到</h4>
+                        <p>从咨询到售后都很专业，有问必答，购物体验很好。</p>
+                        <div class="review-author">—— 王先生</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="html.js"></script>
+</body>
+
+</html>

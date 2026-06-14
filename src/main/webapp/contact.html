@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Chaser工作室</title>
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="stars"></div>
+
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+            <img src="img/logo.png" alt="Dream Chaser Logo" class="logo-image">
+            <span class="logo-text">Dream Chaser</span>
+        </a>
+
+        <div class="navbar-menu">
+            <div class="menu-item">
+                <a href="index.html" class="no-arrow">首页</a>
+            </div>
+            <span class="separator">|</span>
+
+            <div class="menu-item">
+                <a href="introduction.html">关于我们</a>
+                <div class="dropdown">
+                    <a href="introduction.html#intro">工作室简介</a>
+                    <a href="introduction.html#history">发展历程</a>
+                    <a href="introduction.html#advantage">工作室优势</a>
+                </div>
+            </div>
+
+            <span class="separator">|</span>
+
+            <div class="menu-item">
+                <a href="project.html">技术项目</a>
+                <div class="dropdown">
+                    <a href="project.html#core">核心项目</a>
+                    <a href="project.html#personal">个人项目</a>
+                </div>
+            </div>
+
+            <span class="separator">|</span>
+
+            <div class="menu-item">
+                <a href="shop.html">商店</a>
+                <div class="dropdown">
+                    <a href="shop.html#train">训练系统</a>
+                    <a href="shop.html#install">安装部件</a>
+                    <a href="shop.html#replace">替换零件</a>
+                    <a href="shop.html#accessory">配件</a>
+                    <a href="shop.html#dealer">经销商</a>
+                    <a href="shop.html#review">评价</a>
+                </div>
+            </div>
+
+            <span class="separator">|</span>
+
+            <div class="menu-item">
+                <a href="team.html">团队成员</a>
+                <div class="dropdown">
+                    <a href="team.html#teacher">指导老师信息</a>
+                    <a href="team.html#member">成员信息</a>
+                </div>
+            </div>
+
+            <span class="separator">|</span>
+
+            <div class="menu-item">
+                <a href="news.html">新闻动态</a>
+                <div class="dropdown">
+                    <a href="news.html#competition">竞赛获奖</a>
+                    <a href="news.html#activity">工作室活动</a>
+                    <a href="news.html#share">技术分享</a>
+                </div>
+            </div>
+            <span class="separator">|</span>
+
+            <div class="menu-item">
+                <a href="contact.html">联系我们</a>
+                <div class="dropdown">
+                    <a href="contact.html#form">在线留言表单</a>
+                    <a href="contact.html#phone">电话/微信/邮箱</a>
+                    <a href="contact.html#location">工作室位置</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <div class="container">
+        <!-- 在线留言表单 -->
+        <section class="section hexin">
+            <div class="section-header">
+                <h2 id="form">📝 在线留言</h2>
+            </div>
+            <div class="section-content hexin-w">
+                <div class="contact-form-wrapper">
+                    <div class="contact-form">
+                        <form action="/new3_war_exploded/addMsg" method="post">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="姓名" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="studentId" placeholder="学号" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="major" placeholder="专业" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="position" placeholder="职位" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="电话" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="contact" placeholder="微信/QQ" required>
+                            </div>
+                            <div class="form-group form-group-full">
+                                <textarea name="message" placeholder="留言内容" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group-full">
+                                <button type="submit" class="submit-btn">提交留言</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-info">
+                        <h3>联系方式</h3>
+                        <p>如有任何问题，欢迎通过以下方式联系我们。</p>
+                        <div class="info-item">
+                            <span class="info-icon">📞</span>
+                            <span>电话：</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💬</span>
+                            <span>微信：</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📧</span>
+                            <span>邮箱：</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工作室位置 -->
+        <section class="section hexin">
+            <div class="section-header">
+                <h2 id="location">📍 工作室位置</h2>
+            </div>
+            <div class="section-content hexin-w">
+                <div class="location-card">
+                    <div class="location-info">
+                        <h4>Dream Chaser 工作室</h4>
+                        <p>地址</p>
+                        <p>校外：湖南科技大学东门外吉利社区C区16栋2号楼2楼</p>
+                        <p>校内：湖南科技大学逸夫楼117</p><br>
+                        <p>欢迎各位同学、老师及合作伙伴前来参观交流！</p>
+                    </div>
+                    <div class="location-map">
+                        <img src="img/location.jpg" alt="工作室位置地图">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="html.js"></script>
+</body>
+
+</html>
